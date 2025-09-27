@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy 26th Birthday Revathi! 👑</title>
+    
+    <!-- Bootstrap 5.3 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- AOS (Animate On Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Dancing+Script&family=Pacifico&family=Allura&family=Alex+Brush&family=Satisfy&family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style-ultimate.css">
+</head>
+<body>
+    <!-- Particle Canvas -->
+    <canvas id="particlesCanvas"></canvas>
+    
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top glass-nav">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#home">
+                <i class="fas fa-crown text-pink"></i> Hey Revathii!!
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#wishes">Wishes</a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-pink btn-sm ms-2" id="musicBtn">
+                            <i class="fas fa-music"></i> Play Music
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section min-vh-100 d-flex align-items-center">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="hero-content">
+                        <h1 class="hero-title mb-4" id="heroTitle">
+                            Happy 26th Birthday<br>
+                            <span class="gradient-text">Revathi!</span> 
+                            <i class="fas fa-crown text-pink"></i>
+                        </h1>
+                        <p class="hero-subtitle mb-4" data-aos="fade-up" data-aos-delay="300">
+                            Main character energy — today & always ✨
+                        </p>
+                        <div class="genz-lines mb-5">
+                            <p class="genz-line" data-aos="fade-up" data-aos-delay="500">
+                                <i class="fas fa-star text-pink me-2"></i>
+                                Another year of being absolutely iconic
+                            </p>
+                            <p class="genz-line" data-aos="fade-up" data-aos-delay="700">
+                                <i class="fas fa-heart text-pink me-2"></i>
+                                You're literally glowing bestie!
+                            </p>
+                            <p class="genz-line" data-aos="fade-up" data-aos-delay="900">
+                                <i class="fas fa-sparkles text-pink me-2"></i>
+                                Main character energy all day
+                            </p>
+                            <p class="genz-line" data-aos="fade-up" data-aos-delay="1100">
+                                <i class="fas fa-fire text-pink me-2"></i>
+                                No cap, you're amazing!
+                            </p>
+                        </div>
+                        <button class="btn btn-celebrate btn-lg" id="celebrateBtn" data-aos="zoom-in" data-aos-delay="1300">
+                            <i class="fas fa-party-horn me-2"></i>
+                            Let's Celebrate! 🎉
+                        </button>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="hero-image-container">
+                        <div class="floating-card" data-aos="float">
+                            <img src="r2.png" alt="Revathi" class="hero-image">
+                            <div class="card-glow"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator" data-aos="bounce" data-aos-delay="2000">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="section-title" data-aos="fade-up">
+                        <i class="fas fa-images text-pink me-3"></i>
+                        Memory Lane
+                    </h2>
+                    <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">
+                        Beautiful moments captured in time ✨
+                    </p>
+                </div>
+            </div>
+            
+            <div class="photo-grid" id="photoGrid">
+                <!-- Photos will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Wishes Section -->
+    <section id="wishes" class="py-5 bg-gradient">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="section-title text-white" data-aos="fade-up">
+                        <i class="fas fa-gift text-pink me-3"></i>
+                        Birthday Wishes
+                    </h2>
+                </div>
+            </div>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="wishes-card glass-card" data-aos="zoom-in">
+                        <div class="card-body p-5 text-center">
+                            <div class="wish-icon mb-4">
+                                <i class="fas fa-birthday-cake fa-3x text-pink"></i>
+                            </div>
+                            <h3 class="wish-title mb-4">Special Birthday Message✨</h3>
+                            <p class="wish-text mb-4">
+                                "May this new year of your life be filled with endless joy, 
+                                incredible adventures, and all the success you deserve. 
+                                You're not just getting older, you're getting more awesome! 
+                                Keep shining bright, queen! 👑✨"
+                            </p>
+                            <div class="wish-signature">
+                                <p class="mb-0 fw-bold">With best wishes,</p>
+                                <p class="text-pink fw-bold">Your small Friend 🎁</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4 text-center">
+        <div class="container">
+            <p class="mb-0 text-muted">
+                Made with <i class="fas fa-heart text-pink"></i> for Revathi's 26th Birthday by Sakthi
+            </p>
+        </div>
+    </footer>
+
+    <!-- Audio -->
+    <audio id="bgAudio" loop>
+        <source src="Taylor Swift - Lover.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="script-ultimate.js"></script>
+</body>
+</html>
